@@ -9,8 +9,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import com.example.decide.decision.DecisionScreen
-import com.example.decide.home.HomeScreen
+import com.example.decide.decision.ShowDecisionScreen
+import com.example.decide.home.ShowHomeScreen
 import java.util.Locale
 
 class MainActivity : ComponentActivity() {
@@ -18,24 +18,24 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MaterialTheme {
-                DecideApp()
+                ShowDecideApp()
             }
         }
     }
 }
 
 @Composable
-private fun DecideApp() {
+private fun ShowDecideApp() {
     var decisionTitle by rememberSaveable { mutableStateOf<String?>(null) }
 
     if (decisionTitle == null) {
-        HomeScreen(
+        ShowHomeScreen(
             onTitleSubmitted = { title ->
                 decisionTitle = title.toTitleCase()
             },
         )
     } else {
-        DecisionScreen(title = decisionTitle!!)
+        ShowDecisionScreen(title = decisionTitle!!)
     }
 }
 

@@ -35,7 +35,7 @@ The expected minimum amount of time each Sprint for each category is as follows:
 | 11/23/26 | 10:15    | TP     | Talked about the finishing the project.    | 60          |
 | 11/24/26 | 10:30    | IM     | Set up emulator, file structure, steps.    | 60          |
 | 11/24/26 | 1:10     | IM     | Make title input push to a second page.    | 30          |
-|          |          |        |                                            |             |
+| 11/24/26 | 3:40     | IM     |                                            |             |
 |          |          |        |                                            |             |
 |          |          |        |                                            |             |
 |          |          |        |                                            |             |

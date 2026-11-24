@@ -165,6 +165,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+string add_button
 string androidx_startup
 string app_name
 string call_notification_answer_action
@@ -176,6 +177,8 @@ string call_notification_ongoing_text
 string call_notification_screening_text
 string close_drawer
 string close_sheet
+string cons_entry_title
+string cons_title
 string decision_title_label
 string decision_title_prompt
 string default_error_message
@@ -183,6 +186,7 @@ string default_popup_window_title
 string dropdown_menu
 string in_progress
 string indeterminate
+string item_text_label
 string m3c_bottom_sheet_collapse_description
 string m3c_bottom_sheet_dismiss_description
 string m3c_bottom_sheet_drag_handle_description
@@ -241,10 +245,14 @@ string m3c_time_picker_pm
 string m3c_tooltip_long_press_label
 string m3c_tooltip_pane_description
 string navigation_menu
+string no_items
 string not_selected
+string pros_entry_title
+string pros_title
 string range_end
 string range_start
 string selected
+string significance_label
 string state_empty
 string state_off
 string state_on

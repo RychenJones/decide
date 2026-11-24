@@ -22,7 +22,7 @@ import androidx.compose.ui.unit.dp
 import com.example.decide.R
 
 @Composable
-fun HomeScreen(
+fun ShowHomeScreen(
     onTitleSubmitted: (String) -> Unit,
 ) {
     var decisionTitle by rememberSaveable { mutableStateOf("") }

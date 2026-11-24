@@ -1,7 +1,15 @@
 R_DEF: Internal format may change without notice
 local
 color purple_700
+string add_button
 string app_name
+string cons_entry_title
+string cons_title
 string decision_title_label
 string decision_title_prompt
+string item_text_label
+string no_items
+string pros_entry_title
+string pros_title
+string significance_label
 style Theme.Decide
