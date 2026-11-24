@@ -11,4 +11,11 @@
     <string name="pros_title">Pros</string>
     <string name="cons_title">Cons</string>
     <string name="no_items">No items yet</string>
+    <string name="conclusion_title">Conclusion</string>
+    <string name="total_pro_weight">Pro weight: %1$d</string>
+    <string name="total_con_weight">Con weight: %1$d</string>
+    <string name="recommendation">Recommendation: %1$s</string>
+    <string name="recommend_consider">Consider it</string>
+    <string name="recommend_reconsider">Reconsider it</string>
+    <string name="recommend_no_clear_result">No clear recommendation</string>
 </resources>

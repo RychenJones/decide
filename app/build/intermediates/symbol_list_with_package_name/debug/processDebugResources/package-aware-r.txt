@@ -177,6 +177,7 @@ string call_notification_ongoing_text
 string call_notification_screening_text
 string close_drawer
 string close_sheet
+string conclusion_title
 string cons_entry_title
 string cons_title
 string decision_title_label
@@ -251,6 +252,10 @@ string pros_entry_title
 string pros_title
 string range_end
 string range_start
+string recommend_consider
+string recommend_no_clear_result
+string recommend_reconsider
+string recommendation
 string selected
 string significance_label
 string state_empty
@@ -262,6 +267,8 @@ string tab
 string template_percent
 string tooltip_description
 string tooltip_label
+string total_con_weight
+string total_pro_weight
 style DialogWindowTheme
 style EdgeToEdgeFloatingDialogTheme
 style EdgeToEdgeFloatingDialogWindowTheme

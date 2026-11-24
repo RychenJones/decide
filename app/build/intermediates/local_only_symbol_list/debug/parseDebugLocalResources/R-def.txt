@@ -3,6 +3,7 @@ local
 color purple_700
 string add_button
 string app_name
+string conclusion_title
 string cons_entry_title
 string cons_title
 string decision_title_label
@@ -11,5 +12,11 @@ string item_text_label
 string no_items
 string pros_entry_title
 string pros_title
+string recommend_consider
+string recommend_no_clear_result
+string recommend_reconsider
+string recommendation
 string significance_label
+string total_con_weight
+string total_pro_weight
 style Theme.Decide

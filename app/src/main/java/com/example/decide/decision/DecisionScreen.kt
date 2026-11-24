@@ -106,6 +106,32 @@ fun ShowDecisionScreen(
                 modifier = Modifier.weight(1f),
             )
         }
+
+        HorizontalDivider()
+
+        ShowConclusion(uiState)
+    }
+}
+
+@Composable
+private fun ShowConclusion(uiState: DecisionUiState) {
+    val recommendationText = when (uiState.recommendation) {
+        Recommendation.CONSIDER -> stringResource(R.string.recommend_consider)
+        Recommendation.RECONSIDER -> stringResource(R.string.recommend_reconsider)
+        Recommendation.NO_CLEAR_RECOMMENDATION -> {
+            stringResource(R.string.recommend_no_clear_result)
+        }
+    }
+
+    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Text(
+            text = stringResource(R.string.conclusion_title),
+            style = MaterialTheme.typography.titleLarge,
+        )
+
+        Text(stringResource(R.string.total_pro_weight, uiState.totalProWeight))
+        Text(stringResource(R.string.total_con_weight, uiState.totalConWeight))
+        Text(stringResource(R.string.recommendation, recommendationText))
     }
 }
 

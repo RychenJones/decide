@@ -7,10 +7,29 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import java.util.Locale
 
+enum class Recommendation {
+    CONSIDER,
+    RECONSIDER,
+    NO_CLEAR_RECOMMENDATION,
+}
+
 data class DecisionUiState(
     val pros: List<DecisionItem> = emptyList(),
     val cons: List<DecisionItem> = emptyList(),
-)
+) {
+    val totalProWeight: Int
+        get() = pros.sumOf { it.significance }
+
+    val totalConWeight: Int
+        get() = cons.sumOf { it.significance }
+
+    val recommendation: Recommendation
+        get() = when {
+            totalProWeight > totalConWeight -> Recommendation.CONSIDER
+            totalConWeight > totalProWeight -> Recommendation.RECONSIDER
+            else -> Recommendation.NO_CLEAR_RECOMMENDATION
+        }
+}
 
 class DecisionViewModel : ViewModel() {
     private val _uiState = MutableStateFlow(DecisionUiState())
