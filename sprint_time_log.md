@@ -33,7 +33,7 @@ The expected minimum amount of time each Sprint for each category is as follows:
 | 11/18/26 | 3:20     | TP     | Finished AWS PB setup, connected to front. | 60          |
 | 11/20/26 | 10:15    | MTG    | Team stand up meeting.                     | 60          |
 | 11/23/26 | 10:15    | TP     | Talked about the finishing the project.    | 60          |
-| 11/24/26 | 10:30    | IM     |                                            |             |
+| 11/24/26 | 10:30    | IM     | Set up emulator, file structure, steps.    | 60          |
 |          |          |        |                                            |             |
 
 _Note: Add more rows as needed._
@@ -42,7 +42,7 @@ _Note: Add more rows as needed._
 
 |Categroy                       |Total Time (Hours:Minutes)|
 |-------------------------------|:------------------------:|
-|IM - Individual Module         | 1:00/10                  |
+|IM - Individual Module         | 2:00/10                  |
 |TP - Team Project              | 3:00/4                   |
 |MTG - Class Meetings           | 2:00/4                   |
-|**TOTAL**                      | 6:00/18                  |
+|**TOTAL**                      | 7:00/18                  |

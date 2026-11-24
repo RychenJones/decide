@@ -1,3 +1,14 @@
+# Steps
+
+* create a visual display
+* create the forms
+* create a display for pros and cons
+* create a 1-10 weighting for each pro and con
+* display the overall equation and suggest action
+* provide a reset button at any time
+
+
+ 
 # Decide
 Decide is an Android application built in Kotlin that helps users organize their thoughts when 
 facing difficult decisions.
