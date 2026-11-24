@@ -34,7 +34,7 @@ The expected minimum amount of time each Sprint for each category is as follows:
 | 11/20/26 | 10:15    | MTG    | Team stand up meeting.                     | 60          |
 | 11/23/26 | 10:15    | TP     | Talked about the finishing the project.    | 60          |
 | 11/24/26 | 10:30    | IM     | Set up emulator, file structure, steps.    | 60          |
-| 11/24/26 | 1:10     | IM     |                                            |             |
+| 11/24/26 | 1:10     | IM     | Make title input push to a second page.    | 30          |
 |          |          |        |                                            |             |
 |          |          |        |                                            |             |
 |          |          |        |                                            |             |
@@ -51,7 +51,7 @@ _Note: Add more rows as needed._
 
 |Categroy                       |Total Time (Hours:Minutes)|
 |-------------------------------|:------------------------:|
-|IM - Individual Module         | 2:00/10                  |
+|IM - Individual Module         | 2:30/10                  |
 |TP - Team Project              | 3:00/4                   |
 |MTG - Class Meetings           | 2:00/4                   |
-|**TOTAL**                      | 7:00/18                  |
+|**TOTAL**                      | 7:30/18                  |
