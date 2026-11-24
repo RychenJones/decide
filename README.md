@@ -1,5 +1,10 @@
 # Decide
-Decide is a mobile app built in Kotlin to help in decision making.
+Decide is an Android application built in Kotlin that helps users organize their thoughts when 
+facing difficult decisions.
+
+Create a decision, list its pros and cons, and revisit your thoughts whenever you need to. 
+Decide provides a simple, distraction-free way to evaluate the advantages and disadvantages 
+of your choices.
 
 ## Instructions for Build and Use
 

@@ -30,10 +30,10 @@ The expected minimum amount of time each Sprint for each category is as follows:
 | 11/16/26 | 6:15     | IM     | Learned about Android Studio and how to use| 30          |
 | 11/17/26 | 3:45     | IM     | Downloaded Android Studio and setup project| 30          |
 | 11/18/26 | 10:15    | TP     | Cleaned up the project repo.               | 60          |
-| 11/18/26 | 3:20     | IM     | Finished AWS PB setup, connected to front. | 60          |
-|          |          |        |                                            |             |
-|          |          |        |                                            |             |
-|          |          |        |                                            |             |
+| 11/18/26 | 3:20     | TP     | Finished AWS PB setup, connected to front. | 60          |
+| 11/20/26 | 10:15    | MTG    | Team stand up meeting.                     | 60          |
+| 11/23/26 | 10:15    | TP     | Talked about the finishing the project.    | 60          |
+| 11/24/26 | 10:30    | IM     |                                            |             |
 |          |          |        |                                            |             |
 
 _Note: Add more rows as needed._
@@ -43,6 +43,6 @@ _Note: Add more rows as needed._
 |Categroy                       |Total Time (Hours:Minutes)|
 |-------------------------------|:------------------------:|
 |IM - Individual Module         | 1:00/10                  |
-|TP - Team Project              | 2:00/4                   |
-|MTG - Class Meetings           | 1:00/4                   |
-|**TOTAL**                      | 4:00/18                  |
+|TP - Team Project              | 3:00/4                   |
+|MTG - Class Meetings           | 2:00/4                   |
+|**TOTAL**                      | 6:00/18                  |
