@@ -176,6 +176,8 @@ string call_notification_ongoing_text
 string call_notification_screening_text
 string close_drawer
 string close_sheet
+string decision_title_label
+string decision_title_prompt
 string default_error_message
 string default_popup_window_title
 string dropdown_menu

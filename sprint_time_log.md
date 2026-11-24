@@ -34,6 +34,15 @@ The expected minimum amount of time each Sprint for each category is as follows:
 | 11/20/26 | 10:15    | MTG    | Team stand up meeting.                     | 60          |
 | 11/23/26 | 10:15    | TP     | Talked about the finishing the project.    | 60          |
 | 11/24/26 | 10:30    | IM     | Set up emulator, file structure, steps.    | 60          |
+| 11/24/26 | 1:10     | IM     |                                            |             |
+|          |          |        |                                            |             |
+|          |          |        |                                            |             |
+|          |          |        |                                            |             |
+|          |          |        |                                            |             |
+|          |          |        |                                            |             |
+|          |          |        |                                            |             |
+|          |          |        |                                            |             |
+|          |          |        |                                            |             |
 |          |          |        |                                            |             |
 
 _Note: Add more rows as needed._

@@ -2,5 +2,7 @@
 <resources>
     <color name="purple_700">#415F91</color>
     <string name="app_name">Decide</string>
+    <string name="decision_title_label">Decision title</string>
+    <string name="decision_title_prompt">What are you deciding?</string>
     <style name="Theme.Decide" parent="android:style/Theme.Material.Light.NoActionBar"/>
 </resources>
