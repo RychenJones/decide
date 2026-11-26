@@ -36,7 +36,7 @@ The expected minimum amount of time each Sprint for each category is as follows:
 | 11/24/26 | 10:30    | IM     | Set up emulator, file structure, steps.    | 60          |
 | 11/24/26 | 1:10     | IM     | Make title input push to a second page.    | 30          |
 | 11/24/26 | 3:40     | IM     | Added pro/con functionality and conclusinon| 20          |
-| 11/25/26 | 10:40    | IM     |                                            |             |
+| 11/25/26 | 10:40    | IM     | Back/reset buttons, decision list, readme. | 70          |
 |          |          |        |                                            |             |
 |          |          |        |                                            |             |
 |          |          |        |                                            |             |
@@ -51,7 +51,7 @@ _Note: Add more rows as needed._
 
 |Categroy                       |Total Time (Hours:Minutes)|
 |-------------------------------|:------------------------:|
-|IM - Individual Module         | 2:50/10                  |
+|IM - Individual Module         | 4:00/10                  |
 |TP - Team Project              | 3:00/4                   |
 |MTG - Class Meetings           | 2:00/4                   |
-|**TOTAL**                      | 7:50/18                  |
+|**TOTAL**                      | 9:00/18                  |
