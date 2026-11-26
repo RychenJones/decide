@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -11,6 +12,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -28,6 +30,7 @@ import com.example.decide.R
 fun ShowHomeScreen(
     decisions: List<String>,
     onTitleSubmitted: (String) -> Unit,
+    onDecisionSelected: (String) -> Unit,
 ) {
     var decisionTitle by rememberSaveable { mutableStateOf("") }
 
@@ -73,13 +76,17 @@ fun ShowHomeScreen(
                 verticalArrangement = Arrangement.spacedBy(8.dp),
             ) {
                 items(decisions) { decision ->
-                    Text(
-                        text = decision,
+                    OutlinedCard(
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(vertical = 8.dp),
-                        style = MaterialTheme.typography.bodyLarge,
-                    )
+                            .clickable { onDecisionSelected(decision) },
+                    ) {
+                        Text(
+                            text = decision,
+                            modifier = Modifier.padding(16.dp),
+                            style = MaterialTheme.typography.bodyLarge,
+                        )
+                    }
                 }
             }
         }

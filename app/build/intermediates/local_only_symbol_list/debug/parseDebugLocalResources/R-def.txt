@@ -3,6 +3,7 @@ local
 color purple_700
 string add_button
 string app_name
+string back_arrow
 string back_button
 string conclusion_title
 string cons_entry_title

@@ -39,6 +39,9 @@ private fun ShowDecideApp() {
                 }
                 decisionTitle = formattedTitle
             },
+            onDecisionSelected = { title ->
+                decisionTitle = title
+            },
         )
     } else {
         ShowDecisionScreen(
