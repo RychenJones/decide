@@ -2,9 +2,12 @@ package com.example.decide.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.MaterialTheme
@@ -23,6 +26,7 @@ import com.example.decide.R
 
 @Composable
 fun ShowHomeScreen(
+    decisions: List<String>,
     onTitleSubmitted: (String) -> Unit,
 ) {
     var decisionTitle by rememberSaveable { mutableStateOf("") }
@@ -31,6 +35,7 @@ fun ShowHomeScreen(
         val title = decisionTitle.trim()
         if (title.isNotEmpty()) {
             onTitleSubmitted(title)
+            decisionTitle = ""
         }
     }
 
@@ -54,5 +59,29 @@ fun ShowHomeScreen(
             keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
             keyboardActions = KeyboardActions(onDone = { submitTitle() }),
         )
+
+        if (decisions.isEmpty()) {
+            Spacer(modifier = Modifier.weight(1f))
+        } else {
+            Text(
+                text = stringResource(R.string.saved_decisions_title),
+                style = MaterialTheme.typography.titleLarge,
+            )
+
+            LazyColumn(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(8.dp),
+            ) {
+                items(decisions) { decision ->
+                    Text(
+                        text = decision,
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(vertical = 8.dp),
+                        style = MaterialTheme.typography.bodyLarge,
+                    )
+                }
+            }
+        }
     }
 }

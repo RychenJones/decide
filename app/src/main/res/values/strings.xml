@@ -8,6 +8,9 @@
     <string name="item_text_label">Description</string>
     <string name="significance_label">Weight</string>
     <string name="add_button">Add</string>
+    <string name="reset_button">Reset</string>
+    <string name="back_button">Back</string>
+    <string name="saved_decisions_title">Saved decisions</string>
     <string name="pros_title">Pros</string>
     <string name="cons_title">Cons</string>
     <string name="no_items">No items yet</string>

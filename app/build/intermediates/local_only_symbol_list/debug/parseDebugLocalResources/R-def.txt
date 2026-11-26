@@ -3,6 +3,7 @@ local
 color purple_700
 string add_button
 string app_name
+string back_button
 string conclusion_title
 string cons_entry_title
 string cons_title
@@ -16,6 +17,8 @@ string recommend_consider
 string recommend_no_clear_result
 string recommend_reconsider
 string recommendation
+string reset_button
+string saved_decisions_title
 string significance_label
 string total_con_weight
 string total_pro_weight

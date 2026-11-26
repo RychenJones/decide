@@ -27,15 +27,24 @@ class MainActivity : ComponentActivity() {
 @Composable
 private fun ShowDecideApp() {
     var decisionTitle by rememberSaveable { mutableStateOf<String?>(null) }
+    var decisionTitles by rememberSaveable { mutableStateOf(emptyList<String>()) }
 
     if (decisionTitle == null) {
         ShowHomeScreen(
+            decisions = decisionTitles,
             onTitleSubmitted = { title ->
-                decisionTitle = title.toTitleCase()
+                val formattedTitle = title.toTitleCase()
+                if (formattedTitle !in decisionTitles) {
+                    decisionTitles = decisionTitles + formattedTitle
+                }
+                decisionTitle = formattedTitle
             },
         )
     } else {
-        ShowDecisionScreen(title = decisionTitle!!)
+        ShowDecisionScreen(
+            title = decisionTitle!!,
+            onBack = { decisionTitle = null },
+        )
     }
 }
 

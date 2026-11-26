@@ -3,6 +3,7 @@
     <color name="purple_700">#415F91</color>
     <string name="add_button">Add</string>
     <string name="app_name">Decide</string>
+    <string name="back_button">Back</string>
     <string name="conclusion_title">Conclusion</string>
     <string name="cons_entry_title">Add a con</string>
     <string name="cons_title">Cons</string>
@@ -16,6 +17,8 @@
     <string name="recommend_no_clear_result">No clear recommendation</string>
     <string name="recommend_reconsider">Reconsider it</string>
     <string name="recommendation">Recommendation: %1$s</string>
+    <string name="reset_button">Reset</string>
+    <string name="saved_decisions_title">Saved decisions</string>
     <string name="significance_label">Weight</string>
     <string name="total_con_weight">Con weight: %1$d</string>
     <string name="total_pro_weight">Pro weight: %1$d</string>

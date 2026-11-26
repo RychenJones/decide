@@ -168,6 +168,7 @@ layout notification_template_part_time
 string add_button
 string androidx_startup
 string app_name
+string back_button
 string call_notification_answer_action
 string call_notification_answer_video_action
 string call_notification_decline_action
@@ -256,6 +257,8 @@ string recommend_consider
 string recommend_no_clear_result
 string recommend_reconsider
 string recommendation
+string reset_button
+string saved_decisions_title
 string selected
 string significance_label
 string state_empty

@@ -49,6 +49,10 @@ class DecisionViewModel : ViewModel() {
         }
     }
 
+    fun resetDecision() {
+        _uiState.value = DecisionUiState()
+    }
+
     private fun createItem(text: String, significance: Int): DecisionItem? {
         val trimmedText = text.trim()
         if (trimmedText.isEmpty()) return null

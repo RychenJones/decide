@@ -18,6 +18,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -34,7 +35,8 @@ import com.example.decide.R
 @Composable
 fun ShowDecisionScreen(
     title: String,
-    viewModel: DecisionViewModel = viewModel(),
+    onBack: () -> Unit,
+    viewModel: DecisionViewModel = viewModel(key = title),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
@@ -50,10 +52,33 @@ fun ShowDecisionScreen(
             .padding(24.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        Text(
-            text = title,
-            style = MaterialTheme.typography.headlineLarge,
-        )
+        TextButton(onClick = onBack) {
+            Text(stringResource(R.string.back_button))
+        }
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Text(
+                text = title,
+                style = MaterialTheme.typography.headlineLarge,
+                modifier = Modifier.weight(1f),
+            )
+
+            OutlinedButton(
+                onClick = {
+                    viewModel.resetDecision()
+                    proText = ""
+                    conText = ""
+                    proSignificance = 5
+                    conSignificance = 5
+                },
+            ) {
+                Text(stringResource(R.string.reset_button))
+            }
+        }
 
         Text(
             text = stringResource(R.string.pros_entry_title),
