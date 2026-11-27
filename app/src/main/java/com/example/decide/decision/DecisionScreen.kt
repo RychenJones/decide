@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
@@ -19,6 +20,7 @@ import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
@@ -138,12 +140,14 @@ fun ShowDecisionScreen(
                 title = stringResource(R.string.pros_title),
                 items = uiState.pros,
                 modifier = Modifier.weight(1f),
+                onDelete = viewModel::removePro,
             )
 
             ListItems(
                 title = stringResource(R.string.cons_title),
                 items = uiState.cons,
                 modifier = Modifier.weight(1f),
+                onDelete = viewModel::removeCon,
             )
         }
 
@@ -246,10 +250,11 @@ private fun ListItems(
     title: String,
     items: List<DecisionItem>,
     modifier: Modifier = Modifier,
+    onDelete: (DecisionItem) -> Unit,
 ) {
     Column(
         modifier = modifier,
-        verticalArrangement = Arrangement.spacedBy(8.dp),
+        verticalArrangement = Arrangement.spacedBy(2.dp),
     ) {
         Text(
             text = title,
@@ -263,10 +268,26 @@ private fun ListItems(
             )
         } else {
             items.forEach { item ->
-                Text(
-                    text = "${item.text} (${item.significance}/10)",
-                    style = MaterialTheme.typography.bodyMedium,
-                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(
+                        text = "${item.text} (${item.significance}/10)",
+                        modifier = Modifier.weight(1f),
+                        style = MaterialTheme.typography.bodyMedium,
+                    )
+
+                    IconButton(
+                        onClick = { onDelete(item) },
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Close,
+                            contentDescription = stringResource(R.string.delete_item),
+                            tint = MaterialTheme.colorScheme.error,
+                        )
+                    }
+                }
             }
         }
     }

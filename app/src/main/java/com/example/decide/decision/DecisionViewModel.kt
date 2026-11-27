@@ -49,6 +49,18 @@ class DecisionViewModel : ViewModel() {
         }
     }
 
+    fun removePro(item: DecisionItem) {
+        _uiState.update { state ->
+            state.copy(pros = state.pros - item)
+        }
+    }
+
+    fun removeCon(item: DecisionItem) {
+        _uiState.update { state ->
+            state.copy(cons = state.cons - item)
+        }
+    }
+
     fun resetDecision() {
         _uiState.value = DecisionUiState()
     }

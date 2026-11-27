@@ -9,6 +9,7 @@
     <string name="decision_title_label">Decision title</string>
     <string name="decision_title_prompt">What are you deciding?</string>
     <string name="delete_decision">Delete decision</string>
+    <string name="delete_item">Delete item</string>
     <string name="item_text_label">Description</string>
     <string name="no_items">No items yet</string>
     <string name="pros_entry_title">Add a pro</string>

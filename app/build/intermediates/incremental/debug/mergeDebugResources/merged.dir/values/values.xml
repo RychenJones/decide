@@ -119,6 +119,7 @@
     <string name="default_error_message">"Invalid input"</string>
     <string name="default_popup_window_title" ns1:ignore="ExtraTranslation">"Pop-Up Window"</string>
     <string name="delete_decision">Delete decision</string>
+    <string name="delete_item">Delete item</string>
     <string name="dropdown_menu">"Dropdown menu"</string>
     <string name="in_progress">In progress</string>
     <string name="indeterminate">Partially checked</string>
