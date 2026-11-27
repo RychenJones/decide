@@ -17,6 +17,7 @@ import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
@@ -38,6 +39,7 @@ fun ShowHomeScreen(
     onTitleSubmitted: (String) -> Unit,
     onDecisionSelected: (String) -> Unit,
     onDecisionDeleted: (String) -> Unit,
+    onToggleTheme: () -> Unit,
 ) {
     var decisionTitle by rememberSaveable { mutableStateOf("") }
 
@@ -69,6 +71,13 @@ fun ShowHomeScreen(
             keyboardOptions = KeyboardOptions(imeAction = ImeAction.Done),
             keyboardActions = KeyboardActions(onDone = { submitTitle() }),
         )
+
+        OutlinedButton(
+            onClick = onToggleTheme,
+            modifier = Modifier.fillMaxWidth(),
+        ) {
+            Text(stringResource(R.string.toggle_dark_mode))
+        }
 
         if (decisions.isEmpty()) {
             Spacer(modifier = Modifier.weight(1f))

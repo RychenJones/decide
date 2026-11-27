@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_700">#415F91</color>
     <string name="add_button">Add</string>
     <string name="app_name">Decide</string>
     <string name="back_button">Back</string>
@@ -21,6 +20,7 @@
     <string name="reset_button">Reset</string>
     <string name="saved_decisions_title">Saved decisions</string>
     <string name="significance_label">Weight</string>
+    <string name="toggle_dark_mode">Toggle dark mode</string>
     <string name="total_con_weight">Con weight: %1$d</string>
     <string name="total_pro_weight">Pro weight: %1$d</string>
     <style name="Theme.Decide" parent="android:style/Theme.Material.Light.NoActionBar"/>

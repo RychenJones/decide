@@ -22,6 +22,7 @@ string recommendation
 string reset_button
 string saved_decisions_title
 string significance_label
+string toggle_dark_mode
 string total_con_weight
 string total_pro_weight
 style Theme.Decide

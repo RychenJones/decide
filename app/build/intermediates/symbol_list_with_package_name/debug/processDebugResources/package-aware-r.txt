@@ -22,7 +22,6 @@ color call_notification_answer_color
 color call_notification_decline_color
 color notification_action_color_filter
 color notification_icon_bg_color
-color purple_700
 color vector_tint_color
 color vector_tint_theme_color
 dimen compat_button_inset_horizontal_material
@@ -269,6 +268,7 @@ string status_bar_notification_info_overflow
 string switch_role
 string tab
 string template_percent
+string toggle_dark_mode
 string tooltip_description
 string tooltip_label
 string total_con_weight
