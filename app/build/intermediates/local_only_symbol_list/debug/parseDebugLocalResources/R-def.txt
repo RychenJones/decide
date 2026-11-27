@@ -10,6 +10,7 @@ string cons_entry_title
 string cons_title
 string decision_title_label
 string decision_title_prompt
+string delete_decision
 string item_text_label
 string no_items
 string pros_entry_title

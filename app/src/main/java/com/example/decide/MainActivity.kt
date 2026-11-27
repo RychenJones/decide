@@ -42,6 +42,9 @@ private fun ShowDecideApp() {
             onDecisionSelected = { title ->
                 decisionTitle = title
             },
+            onDecisionDeleted = { title ->
+                decisionTitles = decisionTitles - title
+            },
         )
     } else {
         ShowDecisionScreen(

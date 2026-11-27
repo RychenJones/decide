@@ -185,6 +185,7 @@ string decision_title_label
 string decision_title_prompt
 string default_error_message
 string default_popup_window_title
+string delete_decision
 string dropdown_menu
 string in_progress
 string indeterminate

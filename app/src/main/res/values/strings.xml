@@ -11,6 +11,7 @@
     <string name="reset_button">Reset</string>
     <string name="back_button">Back</string>
     <string name="saved_decisions_title">Saved decisions</string>
+    <string name="delete_decision">Delete decision</string>
     <string name="pros_title">Pros</string>
     <string name="cons_title">Cons</string>
     <string name="no_items">No items yet</string>
