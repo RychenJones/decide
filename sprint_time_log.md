@@ -37,7 +37,7 @@ The expected minimum amount of time each Sprint for each category is as follows:
 | 11/24/26 | 1:10     | IM     | Make title input push to a second page.    | 30          |
 | 11/24/26 | 3:40     | IM     | Added pro/con functionality and conclusinon| 20          |
 | 11/25/26 | 10:40    | IM     | Back/reset buttons, decision list, readme. | 70          |
-| 11/26/26 | 10:40    | IM     |                                            |             |
+| 11/26/26 | 10:40    | IM     | 4 color thems, delete for decision and p/c.| 60          |
 |          |          |        |                                            |             |
 |          |          |        |                                            |             |
 |          |          |        |                                            |             |
@@ -51,7 +51,7 @@ _Note: Add more rows as needed._
 
 |Categroy                       |Total Time (Hours:Minutes)|
 |-------------------------------|:------------------------:|
-|IM - Individual Module         | 4:00/10                  |
+|IM - Individual Module         | 5:00/10                  |
 |TP - Team Project              | 3:00/4                   |
 |MTG - Class Meetings           | 2:00/4                   |
-|**TOTAL**                      | 9:00/18                  |
+|**TOTAL**                      | 10:00/18                  |
