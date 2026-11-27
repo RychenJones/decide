@@ -1,6 +1,7 @@
 package com.example.decide.home
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -15,6 +16,8 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.Icon
+import androidx.compose.material3.DropdownMenu
+import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
@@ -32,6 +35,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import com.example.decide.R
+import com.example.decide.ui.theme.AppTheme
 
 @Composable
 fun ShowHomeScreen(
@@ -39,9 +43,19 @@ fun ShowHomeScreen(
     onTitleSubmitted: (String) -> Unit,
     onDecisionSelected: (String) -> Unit,
     onDecisionDeleted: (String) -> Unit,
-    onToggleTheme: () -> Unit,
+    selectedTheme: AppTheme,
+    onThemeSelected: (AppTheme) -> Unit,
 ) {
     var decisionTitle by rememberSaveable { mutableStateOf("") }
+    var themeMenuExpanded by rememberSaveable { mutableStateOf(false) }
+    val selectedThemeName = stringResource(
+        when (selectedTheme) {
+            AppTheme.LIGHT -> R.string.theme_light
+            AppTheme.DARK -> R.string.theme_dark
+            AppTheme.CREAM -> R.string.theme_cream
+            AppTheme.NAVY -> R.string.theme_navy
+        },
+    )
 
     fun submitTitle() {
         val title = decisionTitle.trim()
@@ -72,11 +86,47 @@ fun ShowHomeScreen(
             keyboardActions = KeyboardActions(onDone = { submitTitle() }),
         )
 
-        OutlinedButton(
-            onClick = onToggleTheme,
-            modifier = Modifier.fillMaxWidth(),
-        ) {
-            Text(stringResource(R.string.toggle_dark_mode))
+        Box(modifier = Modifier.fillMaxWidth()) {
+            OutlinedButton(
+                onClick = { themeMenuExpanded = true },
+                modifier = Modifier.fillMaxWidth(),
+            ) {
+                Text(stringResource(R.string.theme_button, selectedThemeName))
+            }
+
+            DropdownMenu(
+                expanded = themeMenuExpanded,
+                onDismissRequest = { themeMenuExpanded = false },
+            ) {
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.theme_light)) },
+                    onClick = {
+                        onThemeSelected(AppTheme.LIGHT)
+                        themeMenuExpanded = false
+                    },
+                )
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.theme_dark)) },
+                    onClick = {
+                        onThemeSelected(AppTheme.DARK)
+                        themeMenuExpanded = false
+                    },
+                )
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.theme_cream)) },
+                    onClick = {
+                        onThemeSelected(AppTheme.CREAM)
+                        themeMenuExpanded = false
+                    },
+                )
+                DropdownMenuItem(
+                    text = { Text(stringResource(R.string.theme_navy)) },
+                    onClick = {
+                        onThemeSelected(AppTheme.NAVY)
+                        themeMenuExpanded = false
+                    },
+                )
+            }
         }
 
         if (decisions.isEmpty()) {

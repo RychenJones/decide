@@ -20,7 +20,11 @@
     <string name="reset_button">Reset</string>
     <string name="saved_decisions_title">Saved decisions</string>
     <string name="significance_label">Weight</string>
-    <string name="toggle_dark_mode">Toggle dark mode</string>
+    <string name="theme_button">Theme: %1$s</string>
+    <string name="theme_cream">Cream</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_navy">Navy</string>
     <string name="total_con_weight">Con weight: %1$d</string>
     <string name="total_pro_weight">Pro weight: %1$d</string>
     <style name="Theme.Decide" parent="android:style/Theme.Material.Light.NoActionBar"/>

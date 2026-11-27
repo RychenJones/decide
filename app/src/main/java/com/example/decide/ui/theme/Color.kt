@@ -4,6 +4,28 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
+enum class AppTheme {
+    LIGHT,
+    DARK,
+    CREAM,
+    NAVY,
+}
+
+private val Navy950 = Color(0xFF081A2A)
+private val Navy900 = Color(0xFF0F2B44)
+private val Navy800 = Color(0xFF17466B)
+private val Navy200 = Color(0xFFB4D0E8)
+private val Navy100 = Color(0xFFD0E4F7)
+
+private val Cream50 = Color(0xFFFFF8F0)
+private val Cream100 = Color(0xFFF3E7D7)
+private val Cream200 = Color(0xFFE8D8C4)
+private val Cream900 = Color(0xFF2B2118)
+
+private val Gold700 = Color(0xFF7A5C31)
+private val Gold200 = Color(0xFFFFDDB1)
+private val White = Color(0xFFFFFFFF)
+
 val LightColorScheme = lightColorScheme(
     primary = Color(0xFF415F91),
     onPrimary = Color(0xFFFFFFFF),
@@ -54,4 +76,56 @@ val DarkColorScheme = darkColorScheme(
     surfaceVariant = Color(0xFF43474E),
     onSurfaceVariant = Color(0xFFC3C7CF),
     outline = Color(0xFF8D9199),
+)
+
+val CreamColorScheme = lightColorScheme(
+    primary = Navy900,
+    onPrimary = White,
+    primaryContainer = Navy100,
+    onPrimaryContainer = Navy950,
+    secondary = Navy800,
+    onSecondary = White,
+    secondaryContainer = Cream200,
+    onSecondaryContainer = Cream900,
+    tertiary = Gold700,
+    onTertiary = White,
+    tertiaryContainer = Gold200,
+    onTertiaryContainer = Cream900,
+    error = Color(0xFFBA1A1A),
+    onError = White,
+    errorContainer = Color(0xFFFFDAD6),
+    onErrorContainer = Color(0xFF410002),
+    background = Cream50,
+    onBackground = Cream900,
+    surface = Cream50,
+    onSurface = Cream900,
+    surfaceVariant = Cream100,
+    onSurfaceVariant = Color(0xFF4B463F),
+    outline = Color(0xFF7C766D),
+)
+
+val NavyColorScheme = darkColorScheme(
+    primary = Navy200,
+    onPrimary = Navy950,
+    primaryContainer = Navy800,
+    onPrimaryContainer = Navy100,
+    secondary = Cream200,
+    onSecondary = Cream900,
+    secondaryContainer = Navy900,
+    onSecondaryContainer = Cream100,
+    tertiary = Gold200,
+    onTertiary = Cream900,
+    tertiaryContainer = Gold700,
+    onTertiaryContainer = Gold200,
+    error = Color(0xFFFFB4AB),
+    onError = Color(0xFF690005),
+    errorContainer = Color(0xFF93000A),
+    onErrorContainer = Color(0xFFFFDAD6),
+    background = Navy950,
+    onBackground = Cream100,
+    surface = Navy950,
+    onSurface = Cream100,
+    surfaceVariant = Navy900,
+    onSurfaceVariant = Cream200,
+    outline = Navy200,
 )

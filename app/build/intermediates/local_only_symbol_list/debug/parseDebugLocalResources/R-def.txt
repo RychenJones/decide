@@ -22,7 +22,11 @@ string recommendation
 string reset_button
 string saved_decisions_title
 string significance_label
-string toggle_dark_mode
+string theme_button
+string theme_cream
+string theme_dark
+string theme_light
+string theme_navy
 string total_con_weight
 string total_pro_weight
 style Theme.Decide

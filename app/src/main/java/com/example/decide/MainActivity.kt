@@ -11,6 +11,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import com.example.decide.decision.ShowDecisionScreen
 import com.example.decide.home.ShowHomeScreen
+import com.example.decide.ui.theme.AppTheme
 import com.example.decide.ui.theme.DecideTheme
 import java.util.Locale
 
@@ -19,11 +20,16 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val systemInDarkTheme = isSystemInDarkTheme()
-            var darkTheme by rememberSaveable { mutableStateOf(systemInDarkTheme) }
+            var selectedTheme by rememberSaveable {
+                mutableStateOf(
+                    if (systemInDarkTheme) AppTheme.DARK else AppTheme.LIGHT,
+                )
+            }
 
-            DecideTheme(darkTheme = darkTheme) {
+            DecideTheme(appTheme = selectedTheme) {
                 ShowDecideApp(
-                    onToggleTheme = { darkTheme = !darkTheme },
+                    selectedTheme = selectedTheme,
+                    onThemeSelected = { selectedTheme = it },
                 )
             }
         }
@@ -32,7 +38,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun ShowDecideApp(
-    onToggleTheme: () -> Unit,
+    selectedTheme: AppTheme,
+    onThemeSelected: (AppTheme) -> Unit,
 ) {
     var decisionTitle by rememberSaveable { mutableStateOf<String?>(null) }
     var decisionTitles by rememberSaveable { mutableStateOf(emptyList<String>()) }
@@ -53,7 +60,8 @@ private fun ShowDecideApp(
             onDecisionDeleted = { title ->
                 decisionTitles = decisionTitles - title
             },
-            onToggleTheme = onToggleTheme,
+            selectedTheme = selectedTheme,
+            onThemeSelected = onThemeSelected,
         )
     } else {
         ShowDecisionScreen(

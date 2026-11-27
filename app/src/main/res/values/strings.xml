@@ -3,7 +3,11 @@
     <string name="app_name">Decide</string>
     <string name="decision_title_prompt">What are you deciding?</string>
     <string name="decision_title_label">Decision title</string>
-    <string name="toggle_dark_mode">Toggle dark mode</string>
+    <string name="theme_button">Theme: %1$s</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="theme_cream">Cream</string>
+    <string name="theme_navy">Navy</string>
     <string name="pros_entry_title">Add a pro</string>
     <string name="cons_entry_title">Add a con</string>
     <string name="item_text_label">Description</string>

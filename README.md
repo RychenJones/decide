@@ -53,10 +53,10 @@ I found these websites useful in developing this software:
 The following items I plan to fix, improve, and/or add to this project in the future:
 
 * [ ] Save decisions permanently across app restarts
-* [ ] Allow users to edit and delete saved decisions
+* [x] Allow users to edit and delete saved decisions
 * [ ] Allow users to edit and delete individual pros and cons
 * [ ] Add charts or graphs to visualize pros and cons
-* [ ] Add dark mode and accessibility improvements
+* [x] Add dark mode and accessibility improvements
 * [ ] Add decision sharing and export options
 * [ ] Add more automated tests
 * [ ] Add undo for recently added items

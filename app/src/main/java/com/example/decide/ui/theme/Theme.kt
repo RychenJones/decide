@@ -15,10 +15,16 @@ import androidx.core.view.WindowCompat
 
 @Composable
 fun DecideTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    appTheme: AppTheme = if (isSystemInDarkTheme()) AppTheme.DARK else AppTheme.LIGHT,
     content: @Composable () -> Unit,
 ) {
-    val colorScheme = if (darkTheme) DarkColorScheme else LightColorScheme
+    val colorScheme = when (appTheme) {
+        AppTheme.LIGHT -> LightColorScheme
+        AppTheme.DARK -> DarkColorScheme
+        AppTheme.CREAM -> CreamColorScheme
+        AppTheme.NAVY -> NavyColorScheme
+    }
+    val darkTheme = appTheme == AppTheme.DARK || appTheme == AppTheme.NAVY
     val view = LocalView.current
 
     if (!view.isInEditMode) {
